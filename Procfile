@@ -1,1 +1,1 @@
-web: gunicorn mike_url_shortner.wsgi:application --log-file -
+web: gunicorn mike_url_shortner.wsgi
