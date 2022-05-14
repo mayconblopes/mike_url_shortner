@@ -13,7 +13,8 @@ def create(request):
         uid = str(uuid.uuid4())[:5]
         new_url = Url(link=link, uuid=uid)
         new_url.save()
-        return render(request, 'index.html', {'new_url': f'http://localhost:8000/{new_url.uuid}'})
+        # return render(request, 'index.html', {'new_url': f'https://secret-ocean-97039.herokuapp.com/{new_url.uuid}'})
+        return render(request, 'index.html', {'new_url': new_url.uuid})
 
 
 def go(request, pk):
